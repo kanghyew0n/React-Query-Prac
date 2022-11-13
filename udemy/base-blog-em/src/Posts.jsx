@@ -27,7 +27,7 @@ export function Posts() {
   }, [currentPage, queryClient]);
 
   // useQuery("쿼리 키", 비동기 함수);
-  const { data, isLoading, isError, error } = useQuery(
+  const { data , isLoading, isError, error } = useQuery(
     ["posts", currentPage],
     () => fetchPosts(currentPage),
     {
